@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "/proto";
+
+package upvote;
+
+// The upvote service definition.
+service Upvote {
+  // Increases the Upvote
+  rpc Upvote (UpvoteRequest) returns (UpvoteReply) {}
+}
+
+// The request
+message UpvoteRequest {
+  string upvote = 1;
+}
+
+// The response
+message UpvoteReply {
+  string message = 1;
+}
